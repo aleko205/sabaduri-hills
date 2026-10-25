@@ -21,3 +21,16 @@ Prompt: Remove all baked-in Georgian lettering and UI fragments; reconstruct for
 ქართული ძველი ძირითადი მისამართები შესაბამის გვერდებზე გადადის.
 
 ფოტოების შეუსაბამობაც გასწორდა: ძველი room-view.jpg სინამდვილეში საკონფერენციო დარბაზია, conference.jpg ლობია, conference-table.jpg სასმელია. ახლა conference და conference-table გამოყენებულია საკონფერენციო ფოტო; room-view, room-balcony და breakfast განახლებულია შენახული Swoop ფოტოებით (12,16,21).
+
+მთავარი გვერდის სათაური ცენტრშია გადატანილი არქივის text-center კომპოზიციის მიხედვით. ქვესათაური აღებულია page-001 HTML-დან: „სათავგადასავლო კომპლექსი საბადურის ტყეში“. მობილურზე სათაური ორ ხაზად გადადის.
+
+## ზუსტი ქართული შრიფტი
+არქივის page-001 HTML, cf-frontend-style-inline-css: @font-face font-family caps, weight 400, src /wp-content/uploads/2024/04/BPG_Tech_Caps_Black.ttf. wp-custom-css-ის გლობალური სელექტორი h1,h2,h3,h4,h5,h6,p,a,span,th,tr,input,label,div,button ადგენს caps !important. Google Fonts Marcellus/Jost/Roboto CSS-ებიც მიბმული იყო, მაგრამ ქართული ელემენტებისთვის caps-ის პირდაპირი გლობალური override დადასტურებულია.
+მომხმარებელმა მოგვაწოდა ფაილი Downloads/BPG_Tech_Caps_Black/BPG_Tech_Caps_Black.ttf; ფაილის შიდა სახელი BPG Tech Caps Black Regular, © 2016 BPG-InfoTech. TTF ადგილობრივადაა ჩაშენებული; Google Fonts-ზე დამოკიდებულება მოხსნილია. Unicode Mtavruli-ზე uppercase გარდაქმნა ამოღებულია, რადგან BPG-ის ძველი caps ფაილი მხედრულ კოდპოინტებზე მთავრულ ფორმებს იყენებს.
+
+## ფუნქციების არქივით შემოწმება
+მთავარი გვერდის cs-gallery: data-column=3, data-autoplay=on, data-autoplay-speed=5000, data-show-arrows=on, data-show-dots=on, variable-width და center-mode=on. აღდგენილ ვერსიაში დაემატა რესპონსიული კარუსელი, ისრები/ინდიკატორები, 5-წამიანი ავტომატური გადართვა და შეჩერება hover/focus/გახსნილი გალერეისას; reduced-motion-ისას ავტომატიკა გამორთულია. ფოტოები ხელმისაწვდომი სასტუმროს არქივიდანაა, ზუსტი ძველი განლაგების პიქსელური ასლი არ არის.
+რესტორნის cs-gallery: data-column=5, autoplay=off, arrows/dots=on; ფოტოებზე data-elementor-open-lightbox=yes და საერთო slideshow ID. დაემატა რესტორნის კარუსელი ავტომატიკის გარეშე და ჯგუფური ფოტოდათვალიერება.
+Elementor kit: global_image_lightbox=yes; counter/fullscreen/zoom/share=yes. აღდგენილია ფოტოებს შორის ისრები, მარცხენა/მარჯვენა კლავიშები, მრიცხველი, გადიდება, მხარდაჭერილ ბრაუზერში სრული ეკრანი და ფოტოს ბმულის კოპირება. მობილურზე გადაფურცვლაც მუშაობს.
+არქივის მთავარი/რესტორნის header: overlap-header, data-sticky-status=disable — არ დამატებულა წებოვანი ჰედერი. nav sub-menu-ში რესტორნის შვილობილი გვერდებია; აღდგენილია desktop hover/click და mobile tap ქვემენიუ.
+ძველი ოთახის ფორმა cs-room-booking მიუთითებს დინამიკურ დაჯავშნაზე, მაგრამ ძველი ბაზა/სერვერი არ გვაქვს: აღდგენილი ფორმა მხოლოდ მოთხოვნის მონახაზია. ონლაინ გადახდა, ავტორიზაცია, availability ან ძველი შეკვეთები მოქმედად არ გასაღდება.
