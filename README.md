@@ -23,3 +23,7 @@ The booking form is a **demo**, it validates dates and composes an email request
 - Replace preview images with high-resolution originals, especially `hero-illustration.jpg`.
 - Optional multilingual content and CMS can be added later.
 - Google Fonts are loaded over the internet; host locally if offline font support is essential.
+
+
+## Internal pages restored (2026-10-25)
+See RESTORATION.md for sources, page coverage and remaining limits. Restaurant and bar menu: https://qrpage.ge/sabadurihills. Homepage cover now uses a text-free AI-edited decorative background. Booking/contact forms prepare an email draft for the hotel; they do not send automatically or confirm reservations.
